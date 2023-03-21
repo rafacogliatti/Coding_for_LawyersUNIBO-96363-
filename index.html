@@ -1,0 +1,44 @@
+html>
+<head>
+<title>Welcome Page</title>
+</head>
+
+<body>
+    <script language = JavaScript>
+        
+        msg = 'Hello World'
+        window.alert (msg) 
+
+        const data = new Date();
+        var d, m, y;
+          date = data.getDate() + '/';
+          mounth = data.getMonth() + 1 + '/';
+            /* l'interprete JavaScript conta i mesi da 0 a 11, quindi, 
+          per identificare il mese di Gennaio verrà utilizzato il numero 0.
+          Per rendere esatta la stampa a video, alla variabile associata 
+          al mese verrà addizionata una unità, 
+          dato che la data 12/03/1978 per l'interprete JavaScript equivale 
+          al 12 Aprile dell'anno 1978, ma il lettore la interpreterà come 12 Marzo*/
+          year = data.getFullYear();
+
+
+          const time = new Date();
+          var h, min, s
+            hour = time.getHours() + ':';
+            minutes = time.getMinutes() + ':';
+            seconds = time.getSeconds();
+
+            /*tentar fazer a hora dinamica dps*/
+
+        document.write('Date:' + date + mounth + year, '\n', 'Time:' + hour + minutes + seconds)
+        
+        document.write ('<h1> Here is my first WebPage </h1>', 
+        '<p1> Hey! My name is Rafaella. </p1>',
+        '<br><p2> I am 23 and this is my first code </p2>')
+        
+    </script>
+ 
+
+</body>
+
+</html>
