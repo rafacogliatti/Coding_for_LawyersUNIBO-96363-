@@ -7,13 +7,15 @@ Webpage for Iot products' users
 
 <html>
 <head>
-<title>My LLB Final Project</title>
+<title>Final Project</title>
 
 <link rel="icon" type="image/x-icon" scr="smart-home.png"> <!--try again flaticon-->
 
-<header><h1 style="color:white"> Your Rights in a Smart Home</h1></header>
+<header><h1 style="color:white"> Do you know what informations IoT devices may have about you? </h1></header>
 
-<br><p1> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's sta ndard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p1>
+<br><p1> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+  Lorem Ipsum has been the industry's sta ndard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p1>
 <br><br><h2>IoT Products</h2>
 <p2>If you are already a client of the brands X, Y, Z, click the bottom bellow to know how your device is working</p2>
 <br>
@@ -22,15 +24,12 @@ Webpage for Iot products' users
 
 <body style="background-color:#8B0000" onload="clock()">
 
+<!-- <bottom onclick='smart_watch()'> Smart Watch</bottom> -->
+
+
 <section style="background-color: grey">
-  <form>Fill according to the instructors
-  <br>
-  <br>
-  <section><h4>Select the smart home product that you have</h4></section>
-  <input type = 'checkbox'>Smart Lock</input>
-  <input type = 'checkbox'> Smart Fridge </input>
-  <input type = 'checkbox'> Smart TV </input><br>
-  <input type = 'text'> Number of the product<input>
+
+  <form> Contact Form
   <br>
   <br>
   <section><h4>Personal informations<h4></section>
@@ -38,11 +37,19 @@ Webpage for Iot products' users
     <input type = 'text'></input>
   <label for = 'data_subject_surname'> Surname </label>
     <input type = 'text'></input>
-  <br><br><label for ='data_subject_ID_type'> Type of ID document (passport, etc) </label>
-    <input type = 'text'></input>
-  <label for = 'data_subject_ID_number'> Number of ID document </label>
   <br>
-  <section></section>
+  <section><h4>Select the your(s) product(s): </h4></section>
+  <input type = 'checkbox'>Smart Lock</input>
+  <input type = 'checkbox'> Smart Fridge </input>
+  <input type = 'checkbox'> Smart TV </input><br>
+  <input type = 'checkbox'> Smart Watch </input><br>
+  <br>
+  <br>
+  <section><h4>What can we do for you? </h4></section>
+  <legend>Please,...</legend>
+  <label for = user_text></label>
+  <input type = 'text'>Write here</input>
+  
   <input type ="submit">send</input>
 
 </form></section>
@@ -57,7 +64,7 @@ Webpage for Iot products' users
 
 //Design: Colours & Texts
 
-//FIRST TRY = STATIC TIME (it will be inside of the legal document)
+//FIRST TRY = STATIC TIME 
 
 function clock() {
 
@@ -78,6 +85,13 @@ document.getElementById('clock').innerHTML = 'Date: ' + day + '/' + month + '/' 
 
 }
 
+// DISPLAY MSG FOR EACH DEVICE
+
+function smart_watch(){
+
+  document.write('Test')
+
+}
 
 </script>
 </body>
@@ -88,3 +102,4 @@ document.getElementById('clock').innerHTML = 'Date: ' + day + '/' + month + '/' 
 
 -->
 </html>
+
