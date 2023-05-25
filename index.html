@@ -1,44 +1,90 @@
-html>
+<!-- 
+
+Webpage for Iot products' users
+-->
+
+<!DOCTYPE html><!-- declaration -->
+
+<html>
 <head>
-<title>Welcome Page</title>
+<title>My LLB Final Project</title>
+
+<link rel="icon" type="image/x-icon" scr="smart-home.png"> <!--try again flaticon-->
+
+<header><h1 style="color:white"> Your Rights in a Smart Home</h1></header>
+
+<br><p1> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's sta ndard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p1>
+<br><br><h2>IoT Products</h2>
+<p2>If you are already a client of the brands X, Y, Z, click the bottom bellow to know how your device is working</p2>
+<br>
+<br>
 </head>
 
-<body>
-    <script language = JavaScript>
-        
-        msg = 'Hello World'
-        window.alert (msg) 
+<body style="background-color:#8B0000" onload="clock()">
 
-        const data = new Date();
-        var d, m, y;
-          date = data.getDate() + '/';
-          mounth = data.getMonth() + 1 + '/';
-            /* l'interprete JavaScript conta i mesi da 0 a 11, quindi, 
-          per identificare il mese di Gennaio verrà utilizzato il numero 0.
-          Per rendere esatta la stampa a video, alla variabile associata 
-          al mese verrà addizionata una unità, 
-          dato che la data 12/03/1978 per l'interprete JavaScript equivale 
-          al 12 Aprile dell'anno 1978, ma il lettore la interpreterà come 12 Marzo*/
-          year = data.getFullYear();
+<section style="background-color: grey">
+  <form>Fill according to the instructors
+  <br>
+  <br>
+  <section><h4>Select the smart home product that you have</h4></section>
+  <input type = 'checkbox'>Smart Lock</input>
+  <input type = 'checkbox'> Smart Fridge </input>
+  <input type = 'checkbox'> Smart TV </input><br>
+  <input type = 'text'> Number of the product<input>
+  <br>
+  <br>
+  <section><h4>Personal informations<h4></section>
+  <label for ='data_subject_name' > Name </label>
+    <input type = 'text'></input>
+  <label for = 'data_subject_surname'> Surname </label>
+    <input type = 'text'></input>
+  <br><br><label for ='data_subject_ID_type'> Type of ID document (passport, etc) </label>
+    <input type = 'text'></input>
+  <label for = 'data_subject_ID_number'> Number of ID document </label>
+  <br>
+  <section></section>
+  <input type ="submit">send</input>
+
+</form></section>
 
 
-          const time = new Date();
-          var h, min, s
-            hour = time.getHours() + ':';
-            minutes = time.getMinutes() + ':';
-            seconds = time.getSeconds();
+<br>
+<div id='clock' style="color:white"></div> <!--browser not reading-->
 
-            /*tentar fazer a hora dinamica dps*/
+<footer><h5> Atention! This is merely a prototype for an exam at University of Bologna during the second semester of 2023. </h5></footer>
 
-        document.write('Date:' + date + mounth + year, '\n', 'Time:' + hour + minutes + seconds)
-        
-        document.write ('<h1> Here is my first WebPage </h1>', 
-        '<p1> Hey! My name is Rafaella. </p1>',
-        '<br><p2> I am 23 and this is my first code </p2>')
-        
-    </script>
- 
+<script  language = JavaScript>
 
+//Design: Colours & Texts
+
+//FIRST TRY = STATIC TIME (it will be inside of the legal document)
+
+function clock() {
+
+let data = new Date()
+var day, month, year;
+day = data.getDate();
+month = data.getMonth() + 1; // add 1 because it starts counting from 0, but we count the months starting at 1
+year = data.getFullYear();
+
+let time = new Date()
+var hour, minutes, seconds;
+hour = time.getHours() + ':';
+minutes = time.getMinutes() + ':';
+seconds = time.getSeconds();
+
+document.getElementById('clock').innerHTML = 'Date: ' + day + '/' + month + '/' + year + '\n' + "Time: " + hour + minutes + seconds
+
+
+}
+
+
+</script>
 </body>
+<!--
+  REFERENCES:
 
+  W3SCHOOL
+
+-->
 </html>
